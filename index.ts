@@ -37,7 +37,7 @@ app.use(morgan('common'));
 app.use(bodyParser.json({limit: '30mb'}));
 app.use(bodyParser.urlencoded({limit: '30mb', extended: true}));
 app.use(cors({
-    allowedHeaders: ['Origin, X-Requested-With, Content-Type, Accept, Authorization'],
+    allowedHeaders: '*',
     methods: ['GET, HEAD, OPTIONS, POST, PUT'],
     origin: '*'
 }));
