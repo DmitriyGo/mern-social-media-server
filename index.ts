@@ -37,9 +37,7 @@ app.use(morgan('common'));
 app.use(bodyParser.json({limit: '30mb'}));
 app.use(bodyParser.urlencoded({limit: '30mb', extended: true}));
 app.use(cors({
-    allowedHeaders: '*',
-    methods: ['GET, HEAD, OPTIONS, POST, PUT'],
-    origin: '*'
+    credentials: true,            //access-control-allow-credentials:true
 }));
 app.use('/assets', express.static(path.join(__dirname, 'public/assets')));
 
